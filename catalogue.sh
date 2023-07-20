@@ -1,5 +1,6 @@
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
 cp catalogue.service /etc/systemd/system/catalogue.service
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 yum install nodejs -y
 useradd roboshop
