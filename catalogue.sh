@@ -4,7 +4,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 yum install nodejs -y
-rm -rf /tmp/catalogue.zip
+rm -rf /tmp/catalogue.zip/*
 useradd roboshop
 mkdir /app
 
