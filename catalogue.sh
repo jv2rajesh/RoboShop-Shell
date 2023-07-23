@@ -12,6 +12,10 @@ yum install nodejs -y
 
 echo -e  "\e[36m>>>>>>>> creating application user <<<<<<<<<<\e[0m"
 useradd roboshop
+
+echo -e  "\e[36m>>>>>>>> removing existing content in add directory <<<<<<<<<<\e[0m"
+rm -rf /add
+
 echo -e  "\e[36m>>>>>>>> creating directory <<<<<<<<<<\e[0m"
 mkdir /app
 echo -e  "\e[36m>>>>>>>> download application content <<<<<<<<<<\e[0m"
