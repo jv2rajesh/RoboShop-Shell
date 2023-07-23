@@ -38,6 +38,7 @@ mongo --host mongodb.jv2rajesh.online </app/schema/catalogue.js &>>/tmp/roboshop
 
 echo -e  "\e[36m>>>>>>>> start catalogue service <<<<<<<<<<\e[0m"
 
+
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
