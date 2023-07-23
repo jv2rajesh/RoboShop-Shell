@@ -10,3 +10,4 @@ yum install redis -y &>> /tmp/roboshop.log
 # Update listen address
 systemctl enable redis &>> /tmp/roboshop.log
 systemctl restart redis
+# completed
