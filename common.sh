@@ -1,4 +1,5 @@
 
+nodejs() {
 log=/tmp/roboshop.log
 
 echo -e  "\e[36m>>>>>>>> create user service <<<<<<<<<<\e[0m"
@@ -45,4 +46,5 @@ echo -e  "\e[36m>>>>>>>> start user service <<<<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable user
 systemctl restart user
+}
 
