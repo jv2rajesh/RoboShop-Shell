@@ -28,7 +28,6 @@ func_apppreq() {
 func_systemd() {
 
   echo -e  "\e[36m>>>>>>>> start ${component} service <<<<<<<<<<\e[0m"
-  systemctl daemon-reload
   systemctl enable ${component}
   systemctl restart ${component}
 
