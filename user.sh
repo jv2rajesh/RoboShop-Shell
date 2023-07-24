@@ -3,4 +3,4 @@ component=user
 
 source common.sh
 
-nodejs
+func_nodejs
