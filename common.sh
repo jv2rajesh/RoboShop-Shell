@@ -1,3 +1,4 @@
+log=/tmp/roboshop.log
 
 func_apppreq() {
   echo -e  "\e[36m>>>>>>>> creating application ${component} <<<<<<<<<<\e[0m"
