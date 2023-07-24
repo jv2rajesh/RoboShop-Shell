@@ -35,7 +35,6 @@ func_systemd() {
 }
 
 
-
 func_nodejs() {
 log=/tmp/roboshop.log
 
@@ -82,18 +81,18 @@ func_schema_setup() {
 
 func_java() {
 
-echo -e  "\e[36m>>>>>>>> install maven <<<<<<<<<<\e[0m"
-yum install maven -y &>>${log}
+   echo -e  "\e[36m>>>>>>>> install maven <<<<<<<<<<\e[0m"
+   yum install maven -y &>>${log}
 
-func_apppreq
+   func_apppreq
 
-echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
-mvn clean &>>${log}
-mv target/${component}-1.0.jar ${component}.jar &>>${log}
+   echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
+   mvn clean &>>${log}
+   mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
-func_schema_setup
+   func_schema_setup
 
-func_systemd
+  func_systemd
 
 }
 
@@ -113,3 +112,4 @@ func_python() {
   func_systemd
 
 }
+
