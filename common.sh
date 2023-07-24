@@ -69,6 +69,8 @@ func_schema_setup() {
   echo -e  "\e[36m>>>>>>>> adding ${component} schema <<<<<<<<<<\e[0m"
   mongo --host mongodb.jv2rajesh.online </app/schema/${component}.js &>>${log}
 
+  fi
+
   if [ "${schema_type}"  == "mysql" ] ; then
 
   echo -e  "\e[36m>>>>>>>> install mysql client <<<<<<<<<<\e[0m"
@@ -76,6 +78,8 @@ func_schema_setup() {
 
   echo -e  "\e[36m>>>>>>>>  load schema <<<<<<<<<<\e[0m"
   mysql -h mysql.jv2rajesh.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
+
+  fi
 
 }
 
