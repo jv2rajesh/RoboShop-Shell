@@ -19,6 +19,8 @@ func_apppreq() {
 }
 
 func_systemd() {
+
+  echo -e  "\e[36m>>>>>>>> start ${component} service <<<<<<<<<<\e[0m"
   systemctl daemon-reload
   systemctl enable ${component}
   systemctl restart ${component}
@@ -73,7 +75,7 @@ echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
 mvn clean &>>${log}
 mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
-echo -e  "\e[36m>>>>>>>> install mysql <<<<<<<<<<\e[0m"
+echo -e  "\e[36m>>>>>>>> install mysql client <<<<<<<<<<\e[0m"
 yum install mysql -y &>>${log}
 
 echo -e  "\e[36m>>>>>>>>  load schema <<<<<<<<<<\e[0m"
