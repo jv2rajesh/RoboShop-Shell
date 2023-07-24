@@ -61,22 +61,22 @@ func_java() {
 
 echo -e  "\e[36m>>>>>>>> creating ${component} service <<<<<<<<<<\e[0m"
 
-cp ${component}.service /etc/systemd/system/${component}.service
+cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
 
 echo -e  "\e[36m>>>>>>>> install maven <<<<<<<<<<\e[0m"
-yum install maven -y
+yum install maven -y &>>${log}
 
 func_apppreq
 
 echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
-mvn clean
-mv target/${component}-1.0.jar ${component}.jar
+mvn clean &>>${log}
+mv target/${component}-1.0.jar ${component}.jar &>>${log}
 
 echo -e  "\e[36m>>>>>>>> install mysql <<<<<<<<<<\e[0m"
-yum install mysql -y
+yum install mysql -y &>>${log}
 
 echo -e  "\e[36m>>>>>>>>  load schema <<<<<<<<<<\e[0m"
-mysql -h mysql.jv2rajesh.online -uroot -pRoboShop@1 < /app/schema/${component}.sql
+mysql -h mysql.jv2rajesh.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
 
 func_systemd
 
