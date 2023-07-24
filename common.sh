@@ -18,7 +18,11 @@ func_apppreq() {
   func_exit_status
 
   echo -e  "\e[36m>>>>>>>> creating application ${component} <<<<<<<<<<\e[0m"
-  useradd roboshop &>>${log}
+
+  id roboshop &>>${log}
+  if [ $? -ne 0 ] ; then
+    useradd roboshop &>>${log}
+
   func_exit_status
 
   echo -e  "\e[36m>>>>>>>> removing existing content in add directory <<<<<<<<<<\e[0m"
