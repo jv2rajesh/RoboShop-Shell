@@ -22,7 +22,7 @@ func_apppreq() {
   id roboshop &>>${log}
   if [ $? -ne 0 ] ; then
     useradd roboshop &>>${log}
-
+  fi
   func_exit_status
 
   echo -e  "\e[36m>>>>>>>> removing existing content in add directory <<<<<<<<<<\e[0m"
