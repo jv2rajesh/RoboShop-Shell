@@ -122,7 +122,7 @@ func_java() {
    func_apppreq
 
    echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
-   mvn clean &>>${log}
+   mvn clean package &>>${log}
    mv target/${component}-1.0.jar ${component}.jar &>>${log
    func_exit_status
 
