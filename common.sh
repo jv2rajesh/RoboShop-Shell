@@ -123,7 +123,7 @@ func_java() {
 
    echo -e  "\e[36m>>>>>>>> install dependencies <<<<<<<<<<\e[0m"
    mvn clean package &>>${log}
-   mv target/${component}-1.0.jar ${component}.jar &>>${log
+   mv target/${component}-1.0.jar ${component}.jar &>>${log}
    func_exit_status
 
    func_schema_setup
@@ -131,7 +131,6 @@ func_java() {
   func_systemd
 
 }
-
 
 
 func_python() {
